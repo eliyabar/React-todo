@@ -19,7 +19,7 @@ type ContextProps = {
 export const TaskListContext = createContext<Partial<ContextProps>>({})
 
 const getInitialState = () => {
-    return JSON.parse(localStorage.getItem('tasks') as string) || {taskName: 'Example Task', id: '1'};
+    return localStorage.getItem('tasks')?.length ? JSON.parse(localStorage.getItem('tasks') as string) : {taskName: 'Example Task', id: '1'};
 }
 
 const TaskListContextProvider = (props: { children: React.ReactNode; }) => {
