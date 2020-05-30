@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
+import 'typeface-roboto';
+import Box from '@material-ui/core/Box';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <Box m={0} width={'100vw'}>
+          <App/>
+      </Box>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
